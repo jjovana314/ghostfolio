@@ -1,5 +1,6 @@
 import { HasPermission } from '@ghostfolio/api/decorators/has-permission.decorator';
 import { HasPermissionGuard } from '@ghostfolio/api/guards/has-permission.guard';
+import { ValidateAccessDataInterceptor } from '@ghostfolio/api/interceptors/validate-access-data/validate-access-data.interceptor';
 import { ConfigurationService } from '@ghostfolio/api/services/configuration/configuration.service';
 import { Access } from '@ghostfolio/common/interfaces';
 import { permissions } from '@ghostfolio/common/permissions';
@@ -14,7 +15,8 @@ import {
   Inject,
   Param,
   Post,
-  UseGuards
+  UseGuards,
+  UseInterceptors
 } from '@nestjs/common';
 import { REQUEST } from '@nestjs/core';
 import { AuthGuard } from '@nestjs/passport';
@@ -69,6 +71,7 @@ export class AccessController {
   @HasPermission(permissions.createAccess)
   @Post()
   @UseGuards(AuthGuard('jwt'), HasPermissionGuard)
+  @UseInterceptors(ValidateAccessDataInterceptor)
   public async createAccess(
     @Body() data: CreateAccessDto
   ): Promise<AccessModel> {

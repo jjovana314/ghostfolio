@@ -22,6 +22,7 @@ import { ServeStaticModule } from '@nestjs/serve-static';
 import { StatusCodes } from 'http-status-codes';
 import { join } from 'path';
 
+import { ValidateAccessDataModule } from '../interceptors/validate-access-data/validate-access-data.module';
 import { AccessModule } from './access/access.module';
 import { AccountModule } from './account/account.module';
 import { AdminModule } from './admin/admin.module';
@@ -126,7 +127,8 @@ import { UserModule } from './user/user.module';
     SymbolModule,
     TagModule,
     TwitterBotModule,
-    UserModule
+    UserModule,
+    ValidateAccessDataModule
   ],
   providers: [CronService]
 })
