@@ -7,11 +7,90 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unreleased
 
+### Added
+
+- Extended the export functionality by the tags
+
 ### Changed
 
+- Upgraded `prettier` from version `3.4.2` to `3.5.1`
+
+## 2.140.0 - 2025-02-20
+
+### Changed
+
+- Reloaded the available tags after creating a custom tag in the holding detail dialog (experimental)
+- Improved the validation of the currency management in the admin control panel
+- Migrated the `@ghostfolio/client` components to control flow
+- Migrated the `@ghostfolio/ui` components to control flow
+- Improved the language localization for German (`de`)
+
+### Fixed
+
+- Improved the error handling in the `HttpResponseInterceptor`
+- Fixed an issue while using symbol profile overrides in the historical market data table of the admin control panel
+- Added missing assets in _Storybook_ setup
+
+## 2.139.1 - 2025-02-15
+
+### Added
+
+- Extended the tooltip in the chart of the holdings tab on the home page by the allocation, change and performance
+- Added a new static portfolio analysis rule: _Regional Market Cluster Risk_ (Asia-Pacific Markets)
+- Added a new static portfolio analysis rule: _Regional Market Cluster Risk_ (Japan)
+- Added support to create custom tags in the holding detail dialog (experimental)
+- Extended the tags selector component by a `readonly` attribute
+- Extended the tags selector component to support creating custom tags
+- Extended the holding detail dialog by the historical market data editor (experimental)
+- Added global styles to the _Storybook_ setup
+
+### Changed
+
+- Improved the symbol lookup in the _Trackinsight_ data enhancer for asset profile data
+- Improved the language localization for German (`de`)
+- Upgraded `@trivago/prettier-plugin-sort-imports` from version `5.2.1` to `5.2.2`
+
+### Fixed
+
+- Fixed the gaps in the chart of the benchmark comparator
+
+## 2.138.0 - 2025-02-08
+
+### Added
+
+- Added a new static portfolio analysis rule: _Regional Market Cluster Risk_ (Emerging Markets)
+- Added a new static portfolio analysis rule: _Regional Market Cluster Risk_ (Europe)
+- Added a link to _Duck.ai_ to the _Copy AI prompt to clipboard_ action on the analysis page (experimental)
+- Extracted the tags selector to a reusable component used in the create or update activity dialog and holding detail dialog
+- Added stories for the tags selector component
+
+### Changed
+
+- Improved the caching of the portfolio snapshot in the portfolio calculator by expiring cache entries when a user changes tags in the holding detail dialog
+- Improved the error handling in the _CoinGecko_ service
+- Improved the language localization for German (`de`)
+- Upgraded `svgmap` from version `2.6.0` to `2.12.2`
+
+## 2.137.1 - 2025-02-01
+
+### Added
+
+- Added a new static portfolio analysis rule: _Regional Market Cluster Risk_ (North America)
+- Added support for ETF sector data in the _Yahoo Finance_ data enhancer
+
+### Changed
+
+- Extracted the scraper configuration to a sub form in the asset profile details dialog of the admin control
 - Migrated the database seeding to _TypeScript_
+- Improved the language localization for German (`de`)
 - Upgraded `@trivago/prettier-plugin-sort-imports` from version `4.3.0` to `5.2.1`
+- Upgraded `bull` from version `4.16.4` to `4.16.5`
 - Upgraded `ng-extract-i18n-merge` from version `2.13.1` to `2.14.1`
+- Upgraded `prisma` from version `6.2.1` to `6.3.0`
+
+### Fixed
+
+- Fixed the dynamic numerical precision for cryptocurrencies in the holding detail dialog
 
 ## 2.136.0 - 2025-01-24
 
@@ -40,6 +119,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Moved the language localization for Polski (`pl`) from experimental to general availability
 - Extended the _Financial Modeling Prep_ service
 - Switched to _ESLint_’s flat config format
+- Upgraded `bull` from version `4.16.2` to `4.16.4`
 - Upgraded `chart.js` from version `4.2.0` to `4.4.7`
 - Upgraded `chartjs-chart-treemap` from version `2.3.1` to `3.1.0`
 - Upgraded `chartjs-plugin-annotation` from version `2.1.2` to `3.1.0`

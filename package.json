@@ -1,6 +1,6 @@
 {
   "name": "ghostfolio",
-  "version": "2.136.0",
+  "version": "2.140.0",
   "homepage": "https://ghostfol.io",
   "license": "AGPL-3.0",
   "repository": "https://github.com/ghostfolio/ghostfolio",
@@ -86,14 +86,14 @@
     "@nestjs/platform-express": "10.4.15",
     "@nestjs/schedule": "4.1.2",
     "@nestjs/serve-static": "4.0.2",
-    "@prisma/client": "6.2.1",
+    "@prisma/client": "6.3.0",
     "@simplewebauthn/browser": "9.0.1",
     "@simplewebauthn/server": "9.0.3",
     "@stripe/stripe-js": "5.4.0",
     "alphavantage": "2.2.0",
     "big.js": "6.2.2",
     "bootstrap": "4.6.0",
-    "bull": "4.16.4",
+    "bull": "4.16.5",
     "cache-manager": "5.7.6",
     "cache-manager-redis-yet": "5.1.4",
     "chart.js": "4.4.7",
@@ -132,7 +132,7 @@
     "reflect-metadata": "0.2.2",
     "rxjs": "7.8.1",
     "stripe": "17.3.0",
-    "svgmap": "2.6.0",
+    "svgmap": "2.12.2",
     "twitter-api-v2": "1.14.2",
     "uuid": "11.0.5",
     "yahoo-finance2": "2.11.3",
@@ -171,7 +171,7 @@
     "@storybook/addon-interactions": "8.4.7",
     "@storybook/angular": "8.4.7",
     "@storybook/core-server": "8.4.7",
-    "@trivago/prettier-plugin-sort-imports": "5.2.1",
+    "@trivago/prettier-plugin-sort-imports": "5.2.2",
     "@types/big.js": "6.2.2",
     "@types/cache-manager": "4.0.6",
     "@types/color": "4.2.0",
@@ -195,9 +195,9 @@
     "jest-environment-jsdom": "29.7.0",
     "jest-preset-angular": "14.4.2",
     "nx": "20.3.2",
-    "prettier": "3.4.2",
+    "prettier": "3.5.1",
     "prettier-plugin-organize-attributes": "1.0.0",
-    "prisma": "6.2.1",
+    "prisma": "6.3.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "replace-in-file": "8.3.0",
@@ -213,6 +213,6 @@
     "node": ">=20"
   },
   "prisma": {
-    "seed": "ts-node --compiler-options {\"module\":\"CommonJS\"} prisma/seed.ts"
+    "seed": "npx ts-node --compiler-options {\"module\":\"CommonJS\"} prisma/seed.ts"
   }
 }
